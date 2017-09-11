@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+     document.write('最大值：')
+		     // 最大值
+     var arr=[9,8,7,6,5,4,3,2,1];
+     arr1(arr);
+     function arr1(arr){
+     var max=arr[0];
+     for(var i=0;i<arr.length;i++)
+     {
+        if(max<arr[i])
+        {
+        	max=arr[i];
+        }
+     }
+      document.write(max);}
+      document.write('</br>');
+      document.write('</br>');
+      document.write('</br>');
+
+          // 最大值
+     document.write('最大值函数数组实现：')
+    var stu=[[90,80,70],[85,25,24],[84,82,62]];
+    stu1(stu);
+    function stu1(stu){
+       var temp;
+       for(var i=0;i<stu.length;i++)
+       {
+     for(var j=0;j<stu[i].length;j++)
+     {
+         if(stu[0][0]>stu[i][j]){
+                temp=stu[i][j];
+                stu[i][j]=stu[0][0];
+                stu[0][0]=temp;
+         }
+     }
+    }
+    document.write(stu[0][0]);
+}
+	</script>
+</body>
+</html>
