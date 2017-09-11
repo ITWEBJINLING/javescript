@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shuzuqukong</title>
+</head>
+<body>
+	<script>
+		    // 数组去空
+    var str1=[1,5,8,,6,,94,,8];
+    str0(str1);
+    function str0(str1)
+    { 
+    var str2=[];
+    for(var i=0;i<str1.length;i++)
+    {
+    	if(str1[i]!=undefined)
+    	{
+           str2[str2.length]=str1[i];
+    	}
+    }
+    document.write(str2);
+    }
+	</script>
+</body>
+</html>
