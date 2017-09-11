@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		    var arr=[98,85,53,52,51,20,41];
+    arr1(arr);
+    function arr1(arr){
+    var temp;
+    for(var j=0;j<arr.length;j++)
+    {
+      var max=arr[j];
+      for(var i=j+1;i<arr.length;i++)
+        {
+          if(max<arr[i])
+          {
+         	temp=arr[i];
+            arr[i]=max;
+            max=temp;
+          }
+        }
+    }
+    document.write('从大到小排序的结果是：')
+    document.write(arr);}
+
+	</script>
+</body>
+</html>

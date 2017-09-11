@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		      document.write('<table cellspacing=0 border=1 style="width:600px;height:300px">');
+      document.write('<caption style="font-size:40px;color:#29292a">课堂练习</caption>')
+          for(i=0;i<10;i++)
+          {
+          	if (i%2==0) {document.write('<tr bgcolor=#fa6b33>');}
+          	else {
+          		document.write('<tr bgcolor=#3784f8>');}
+          	   for(j=1;j<=10;j++){
+          	   	document.write('<td>');
+          	   	document.write(i+'-'+j);
+          	   	document.write('</td>');
+          	   }
+          	document.write('</tr>');
+          	document.write('</tr>');
+
+          }
+     document.write('</table>');
+	</script>
+</body>
+</html>

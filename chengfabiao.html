@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	document.write('<table cellspacing=0 style="width:600px;height:300px">');
+    document.write('<caption style="font-size:40px;color:#29292a">九九乘法表js嵌套table</caption>')
+         for(i=0;i<10;i++)
+           {
+          	if (i%2==0) {document.write('<tr bgcolor=#fa6b33>');}
+          	else {
+          		document.write('<tr bgcolor=#3784f8>');}
+          	   for(j=1;j<=i;j++){
+          	   	if(j%2==0)
+          	   	 {
+          	   	document.write('<td bgcolor=#b8f979>');
+          	   	document.write(i+'*'+j+'='+i*j);
+          	   	document.write('</td>');
+          	     }
+          	    if(j%2==1)
+          	   	 {
+          	   	document.write('<td bgcolor=#f97def>');
+          	   	document.write(i+'*'+j+'='+i*j);
+          	   	document.write('</td>');
+          	     }
+          	   }
+          	document.write('</tr>');
+          	document.write('</tr>');
+          }
+     document.write('</table>');
+     // 拼接法
+     var score=1*prompt('请输入你的表格数',12);
+     table(score);
+     function table(n){
+     var table='<table>';
+     for(var i=1;i<n;i++)
+     {
+     	table+='<tr>'
+     	for(var j=1;j<=i;j++)
+     	{
+     		table+='<td>'+i+'+'+j+'='+(i+j)+'</td>'
+     	}
+     	table+='</tr>';
+     }
+     document.write(table);}
+     // // js中不用表格
+     for(i=1;i<10;i++)
+     {
+     	for(j=1;j<=i;j++)
+     	{
+     		if(((i==3) && (j==3)) || ((i==4) && (j==3)))
+     		{
+     			document.write('&nbsp')
+     		}
+     		document.write(i+'*'+j+'='+(i*j)+'&nbsp &nbsp');
+     	}
+     	document.write('<br>')
+     }
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		     document.write('斐波那契数列');
+     var score=1*prompt('请输入你的数',153);
+     feibo(score);
+     function feibo(n){
+     var a=1,b=1;
+     document.write(a);
+     document.write(b);
+     for(var c=0;c<=n;)
+     {
+     	c=a+b;
+     	if(c>n)
+     		{break;}
+     	document.write(c+'&nbsp;');
+     	a=b;
+     	b=c;
+     }}
+     document.write('</br>');
+     document.write('</br>');
+     document.write('</br>');
+      document.write('斐波那契数组法')
+     var score=1*prompt('请输入你的数',12);
+     shuju(score);
+     function shuju(n){
+       var arr=[1,1];
+       for(var i=2;i<n;i++)
+       {
+       	arr[i]=arr[i-1]+arr[i-2];
+       }
+        document.write(arr);}
+	</script>
+</body>
+</html>
