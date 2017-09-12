@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="index.js"></script>
+</head>
+<body>
+<script>
+// 将一个数组复制给另一个数组目前有两个方法：其中一种是直接复制类似于
+// 地址的拷贝和值的拷贝
+// var arr=[52,55,62,52,88];
+// var arr1=[]=arr;
+// 浅拷贝：地址
+// var arr1=[];
+// 深拷贝：值
+// for(i=0;i<arr.length;i++)
+// {
+// 	arr1[i]=arr[i];
+// }
+// var arr=[52,51,23];
+var arr=[52,55,[62,52,88]];
+var arr1=copy(arr);
+console.log(arr1)
+</script>
+</body>
+</html>
