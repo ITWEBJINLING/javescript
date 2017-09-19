@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>myArray</title>
+</head>
+<body>
+	<script>
+	    // 对象通过构造函数实例化出来的		
+		let arr=new myArray('a','b','c','d');
+		let arr1=new myarray1(52,42,63,97,54);
+		// 模仿数组
+		// 输出结果
+		arr.push('x','y','z');
+		console.log(arr);
+		console.log(arr.indexOf('c'));
+		console.log(arr.lastindexof('c'));
+		console.log(arr.includes('b'));
+		console.log(arr.reverse());
+		console.log(arr.join('-'));
+		console.log(arr1.sort());
+		console.log(arr1.sort1());
+		console.log(arr1.some(value=>value>5));
+    console.log(arr1.every(value=>value>0)); 
+    console.log(arr1.map(value=>value+2));
+    console.log(arr1.filter(function(value){
+         if(value>60)
+      {return value;}
+        }))
+		//构造函数开始
+		function myArray(arr){
+           // this[0]=arguments[0];
+           // this[1]=arguments[1];
+           for(let i=0;i<arguments.length;i++){
+           	this[i]=arguments[i];
+           }
+           this.length=arguments.length;
+           this.push=function(){
+           	   for(let i=0;i<arguments.length;i++){
+               this[this.length]=arguments[i];
+               this.length++;
+           }
+           }
+           this.indexOf=function(value){
+               for(let i=0;i<this.length;i++){
+               	if(this[i]==value){
+               		return i;
+               	}
+               }
+               return false;
+           }
+           // 元素最后一次出现的位置
+           this.lastindexof=function(value){
+           	   for(let i=this.length-1;i>=0;i--){
+           	   		if(this[i]==value){
+               		return i;
+               	}
+               }
+               return false;
+           	   }
+           // 判断数组是否存在某一个值，存在true,否则false
+           this.includes=function(value){
+           	   for(let i=0;i<this.length;i++){
+           	   	    if(this[i]==value){
+           	   	    	return true;
+           	   	    }
+           	   }
+           	   return false;
+           }
+           // 返回的是逆序的数组
+           this.reverse=function(){
+           	   let str=[];
+           	   for(let i=this.length-1;i>=0;i--){
+                    str[str.length]=this[i];
+           	   }
+           	   return str;
+           }
+           	// join转换成字符串进行连接
+           this.join=function(value='-'){
+           	    var result='';
+                for(let i=0;i<this.length;i++){
+                   if(i<this.length-1){
+                   	  result+=this[i]+value;
+                   }
+                   else
+                   	  return result+=this[i];
+                }
+           }
+         }
+         function myarray1(arr1){
+         for(let i=0;i<arguments.length;i++){
+           	      this[i]=arguments[i];
+                }
+                this.length=arguments.length;
+         // sort把数组进行排序
+           this.sort=function(){
+                var temp=this[0];
+           	    for(let i=0;i<this.length;i++){
+                    if(this[i]>this[i+1])
+                    {
+                    	temp=this[i];
+                    	this[i]=this[i+1];
+                    	this[i+1]=temp;
+                    }
+           	    }
+           	    console.log(this);
+           	}
+            this.sort1=function(){
+                var temp=this[0];
+           	    for(let i=0;i<this.length;i++){
+                    if(this[i]<this[i+1])
+                    {
+                    	temp=this[i];
+                    	this[i]=this[i+1];
+                    	this[i+1]=temp;
+                    }
+           	    }
+           	    console.log(this);
+           	}
+            this.some=function(fn){
+		       for(let i=0;i<this.length;i++){
+			      if(fn(this[i])){
+				      return true;
+			          }
+		        }
+		          return false;
+	           }
+	        this.every=function(fn){
+	        	for(let i=0;i<this.length;i++){
+	        		if(!fn(this[i])){
+	        			return false;
+	        		}
+	        	}
+	        	  return true;
+	        }
+	        this.map=function(fn){
+                 var newarr=[];
+                 for(let i=0;i<this.length;i++)
+                 {
+                 	newarr[newarr.length]=fn(this[i])
+                 }
+                 return newarr;
+	        }
+	        this.filter=function(fn){
+	        	  var newarr=[];
+	        	  for(let i=0;i<this.length;i++){
+	        	  	if(fn(this[i])){
+	        	  	newarr[newarr.length]=this[i];
+	        	     }
+	        	   }
+	        	   return newarr;
+	         }
+         }
+// indexof:找见第一个的位置，返回
+// reverse把一个数组把它返回来;返回一个新的数组
+// lastindexof
+// join转换成字符串进行连接
+// includes
+// sort把数组进行排序
+// some判断是够符合某一个制定条件的
+// every
+// map
+// filter
+	</script>
+</body>
+</html>
