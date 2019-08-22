@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>郭金玲</title>
+  </head>
+  <body>
+    <div id="app">
+        <input type="text">
+        helloword!
+    </div>
+  </body>
+</html>
+<script>
+// appendChild和while的其他用法
+var ele=document.querySelector('#app');
+let firstNode
+var fragment=document.createDocumentFragment();
+while(firstNode=ele.firstChild){
+    fragment.appendChild(firstNode)
+}
+console.log(fragment)
+</script>
